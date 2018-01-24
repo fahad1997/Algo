@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i,n,j,data[10],ptr,temp,k,count,a,b;
+    printf("Enter how many number you want:");
+    scanf("%d",&n);
+    printf("Enter the numbers:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&data[i]);
+    }
+    count=n;
+    for(j=1;j<n;j++)
+    {
+        ptr=0;
+        printf("\n\n\nPass:%d\n\n",j);
+        while(ptr<n-j)
+        {
+           if(data[ptr]>data[ptr+1])
+            {
+                //a=ptr;
+                //b=ptr+1;
+                temp=data[ptr];
+                data[ptr]=data[ptr+1];
+                data[ptr+1]=temp;
+            }
+            for(i=0;i<n;i++)
+            {
+                if(i<count)
+                {
+                   printf("%d\t",data[i]);
+                }
+            }
+            /*if(a>b)
+                {
+                    printf("\t[%d>%d.This condition is true so the is swapped.]",a,b);
+                }
+                else
+                {
+                    printf("\t[%d>%d.This condition is False so the is swapped.]",a,b);
+                }*/
+             printf("\n");
+             ptr++;
+        }
+        count=n-j;
+    }
+    printf("\n\nThe numbers are:");
+    for(k=0;k<n;k++)
+    {
+        printf("%d\t",data[k]);
+    }
+    return 0;
+}
