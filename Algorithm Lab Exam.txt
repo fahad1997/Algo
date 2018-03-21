@@ -1,0 +1,9 @@
+1.1 array bton 2 array
+2.2 sorted array to 1 sorted array
+3.linear search
+4.binary search
+5.bubble sort
+6.insertion sort
+7.selection sort
+8.LIS
+9.LCM
